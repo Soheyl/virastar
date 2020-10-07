@@ -157,7 +157,7 @@
       text = text.replace(/(["'`]+)(.+?)(\1)/g, '«$2»');
     }
 
-    // should convert ه ی to ه
+    // should convert ه‌ی to هٔ
     if (opts.fix_hamzeh) {
       text = text.replace(/(\S)(ه[\s\u200C]+[یي])(\s)/g, '$1\u0647\u0654$3');
     }
@@ -217,7 +217,7 @@
         }
 
         if (opts.fix_misc_non_persian_chars) {
-          matched = charBatchReplace(matched, ',;كي%', '،؛کی٪');
+          matched = charBatchReplace(matched, ',;كىي%', '،؛کیی٪');
         }
 
         if (opts.fix_question_mark) {
